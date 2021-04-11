@@ -1,0 +1,100 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url(images/dingtea_6drinks.jpeg);
+    background-size: cover;
+}
+
+h1 {
+    margin: 5px;
+    display: inline-block;
+    padding-left: 20px;
+    position: fixed;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 42px;
+    white-space: nowrap;
+}
+
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 1000;
+    padding-left: 25px;
+}
+
+
+
+/*****       SCROLLBAR        *****/
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius:10px;
+    background:#5375a5;
+    background-clip:padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7cd82f;
+}
+
+
+
+/*****       NAVIGATION        *****/
+.navpanel {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.navpanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 2.3vw;
+    font-weight: 500;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.navpanel a:hover {
+    color: #f1f1f1;
+}
+
+.navpanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 30px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 36px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 100px;
+    border: 1px solid #000;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
