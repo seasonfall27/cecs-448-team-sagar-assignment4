@@ -25,7 +25,9 @@ h2 {
     padding-left: 25px;
 }
 
-
+html {
+    scroll-behavior: smooth;
+}
 
 /*****       SCROLLBAR        *****/
 ::-webkit-scrollbar{
