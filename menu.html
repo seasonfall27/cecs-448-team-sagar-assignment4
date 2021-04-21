@@ -30,7 +30,7 @@
         <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
         
     <!-- Content -->
-        <h1>Ding Tea Huntington Beach</h1>
+        <h1 id="title">Ding Tea Huntington Beach</h1>
         
         <h2>Menu</h2>
         
@@ -689,15 +689,20 @@
             
             //Get the go to top button
             var mybutton = document.getElementById("topBtn");
+            
+            // Get title
+            var mytitle = document.getElementById("title");
 
             // When the user scrolls down 20px from the top of the document, show the button
             window.onscroll = function() {scrollFunction()};
 
             function scrollFunction() {
-              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
                 mybutton.style.display = "block";
+                mytitle.style.display = "none";
               } else {
                 mybutton.style.display = "none";
+                mytitle.style.display = "inline";
               }
             }
 
