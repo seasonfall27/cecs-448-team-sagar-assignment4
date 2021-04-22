@@ -3,31 +3,72 @@
 }
 
 body {
-    /* background-image: url(images/dingtea_6drinks.jpeg); */
-    background-size: cover;
+    background-image: url(images/background_base.png);
 }
 
 h1 {
-    margin: 5px;
-    display: inline-block;
-    padding-left: 20px;
-    position: fixed;
+    margin-top: -60px;
+    margin-bottom: 1px;
     font-family: 'Playfair Display SC', serif;
-    font-size: 42px;
+    font-size: 3vw;
+    color: #fff;
     white-space: nowrap;
+    text-align: center;
 }
 
 h2 {
+    margin-top: 0px;
+    margin-bottom: 5px;
     font-family: 'Oswald', sans-serif;
-    font-size: 28px;
+    font-size: 32px;
     text-transform: uppercase;
-    font-weight: 1000;
     padding-left: 25px;
 }
 
+<<<<<<< HEAD
 html {
     scroll-behavior: smooth;
 }
+=======
+h3 {
+    margin-top: 15px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px #000;
+}
+
+h4 {
+    display: inline-block;
+    padding: 100px;
+    text-align: center;
+}
+
+.header {
+    background-image: url(images/home_fields.jpg);
+    background-position: center;
+    background-size: cover;
+    box-shadow: 5px 5px #111;
+    border-radius: 25px;
+    color: #fff;
+    width: auto;
+    height: 8vw;
+    overflow: hidden;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr.solid {
+    border-top: 1px solid #fff;
+    width: 35%;
+}
+
+
+>>>>>>> julia-branch
 
 /*****       SCROLLBAR        *****/
 ::-webkit-scrollbar{
@@ -40,12 +81,12 @@ html {
  
 ::-webkit-scrollbar-thumb {
     border-radius:10px;
-    background:#5375a5;
+    background:#a09769;
     background-clip:padding-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #7cd82f;
+    background: #dfccb3;
 }
 
 
@@ -68,7 +109,7 @@ html {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-family: 'Playfair Display SC', serif;
-    font-size: 2.3vw;
+    font-size: 24px;
     font-weight: 500;
     color: #fff;
     display: block;
@@ -88,19 +129,71 @@ html {
 }
 
 .openbtn {
+    margin-top: 10px;
+    margin-left: 10px;
     font-size: 36px;
     cursor: pointer;
     background-color: #111;
+    box-shadow: 2px 2px #fff;
     color: white;
     padding: 8px 15px;
     border-radius: 100px;
-    border: 1px solid #000;
+    border: 2px solid #111;
 }
 
 .openbtn:hover {
-    background-color: #444;
+    background-color: #624129;
+    border: 2px solid #624129;
 }
 
+
+
+/*****       LANDING SECTION        *****/
+.header_home {
+    background-image: url(images/home_fields.jpg);
+    background-position: center;
+    background-size: cover;
+    box-shadow: 5px 5px #111;
+    border-radius: 25px;
+    color: #fff;
+    width: auto;
+    height: 425px;
+    overflow: hidden;
+}
+
+#history_table {
+    margin-top: 10px;
+    display: block;
+    table-layout: fixed;
+    z-index: 1;
+    max-width: 900px;
+    max-height: 300px;
+}
+
+#history_table tr td:first-child {
+    width: auto;
+}
+
+#history_table tr td:last-child {
+    font-size: 15px;
+    text-align: justify;
+    padding: 0px 30px 0px 30px;
+    background-color: rgba(244, 228, 206, 0.2);
+    border-radius: 40px;
+    color: #fff;
+}
+
+.promo-container {
+    margin-top: 15px;
+    width: 100%;
+    align-items: start;
+    display: grid;
+    grid-gap: 20px;
+    grid-template: auto / auto auto auto;
+    justify-content: center;
+}
+
+<<<<<<< HEAD
 /*****       GO TO TOP SECTION        *****/
 #topBtn {
   display: none;
@@ -123,6 +216,119 @@ html {
   background-color: gray;
 }
 
+=======
+.promo {
+    background-color: #333;
+    width: 27vw;
+    height: 24vh;
+    border-radius: 20px;
+    box-shadow: 5px 5px #f1e1cd;
+    color: #f9eddf;
+    padding: 24px;
+    text-align: center;
+}
+
+.promo:first-child {
+    background-image: url(images/home_promo1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.promo:nth-child(2) {
+    background-image: url(images/background_map3.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.promo:last-child {
+    background-image: url(images/home_promo3.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.promo p {
+    font-weight: 600;
+    text-shadow: 2px 2px #333;
+}
+
+.promo a {
+    background-color: rgba(243, 215, 183, 0.8);
+    border-radius: 50px;
+    color: #333;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3 ease;
+}
+
+.promo a:hover {
+    background-color: rgb(243, 215, 183);
+}
+
+.showcase-container {
+    margin: 20px 0 40px 0;
+    background-image: url(images/background_map1.png);
+    background-position: center;
+    background-size: cover;
+    box-shadow: 5px 5px #111;
+    border-radius: 25px;
+    color: #fff;
+    width: auto;
+    height: 340px;
+}
+
+@keyframes display {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+.pic-ctn {
+    display: inline-block;
+    position: relative;
+    width: auto;
+    height: 300px;
+    margin-top: 20px;
+    margin-left: 300px;
+}
+
+.pic-ctn > img {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 300px);
+    opacity: 0;
+    animation: display;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+img:nth-child(2) {
+    animation-delay: 5s;
+}
+
+
+
+>>>>>>> julia-branch
 /*****       MENU SECTION        *****/
 .page-content {
 	 display: grid;
