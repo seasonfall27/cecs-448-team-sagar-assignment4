@@ -8,6 +8,8 @@
         <!-- Added font family -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Playfair+Display+SC&family=Roboto&family=Source+Serif+Pro:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         
@@ -26,9 +28,74 @@
         
     <!-- Content -->
         <h1>Ding Tea Huntington Beach</h1>
+        <div class = "contact_top" >
+            <h2>Contact Us</h2>
+            <p>We would love to hear from you! Each Ding Tea are individually owned.  We only represent the Huntington Beach, Westminster, San Diego and Artesia locations. </p>
+        </div>
+        <div align = "center">
+            <div align = "center" class = "tester1" > 
+                <div class = "contact_row">
+                    <div class = "contact_Col left" >
+                        <h2>Give us a call!</h2>
+                        <div class = "contact_list">                  
+                            <h3>Hunting Beach, CA</h3>
+                            <h5>16065 Goldenwest Street</h5>
+                            <p><i style="font-size:24px" class="fa">&#xf095;</i> 714.369.6472</p>
+                            <h3>Westminster, CA</h3>
+                            <h5>9615 Bolsa Avenue</h5>
+                            <p><i style="font-size:24px" class="fa">&#xf095;</i> 657.212.5727</p>
+                            <h3>Artesia, CA</h3>
+                            <h5>17627 Pioneer Blvd</h5>
+                            <p><i style="font-size:24px" class="fa">&#xf095;</i> 562.278.2844</p>
+                            <h3>San Diego, CA</h3>
+                            <h5>8280 Mira Mesa Blvd Ste C</h5>
+                            <p><i style="font-size:24px" class="fa">&#xf095;</i> 858.564.8336</p>
+                        </div>
+                    </div>
+                    <div class = "contact_Col right" >
+                        <form onsubmit="submitFunction();return false;">
+                            <h2 align="center">Send us a message!</h2>
+                            <table class="form" align="center" width="100%" cellpadding="10" cellspacing="10">
+                                <tr>
+                                    <td align="right" id="fn1">First Name</td>
+                                    <td><input type="text" name="fname" id="fname" value="" required></td>
+                                </tr>
+                                <tr>
+                                    <td align="right">Last Name</td>
+                                    <td><input type="text" name="lname" id="lname" value="" required></td>
+                                </tr>
+                                <tr>
+                                    <td align="right">Phone Number</td>
+                                    <td><input type="tel" name="phone" id="phone" value="" required></td>
+                                </tr>
+                                <tr>
+                                  <td align="right">Email</td>
+                                  <td><input type="email" name="email" id="email" value="" required></td>
+                                </tr>
+                                <tr>
+                                  <td align="right">Subject</td>
+                                  <td><input type="email" name="email" id="email" value="" required></td>
+                                </tr>
+                                <tr>
+                                  <td align="right">Message</td>
+                                  <td><textarea name="comments" id="comments" cols="22" rows="10" placeholder="How can we help?"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td align= "center" colspan="2">
+                                        <input type="submit" name="submit" id="submit" value="Send"></td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>      
+            </div>
+        </div>
+        <div class ="jb_container">
+            <div class = "join_box"> 
+                <a href="apply.html" class="apply_button">Join our team!</a>
+            </div>
+        </div>    
         
-        <h2>Contact (Header Title)</h2>
-        <p>Description here.</p>
         
         
     <!-- Javascript -->
@@ -41,6 +108,17 @@
             /* Set the width of the sidebar to 0 (hide it) */
             function closeNav() {
                 document.getElementById("nav").style.width = "0";
+            }
+            function submitFunction() {  
+                setTimeout(function() {
+                    //alert("Your submission to the form has been confirmed!");
+                    swal({
+                      title: "Submission Success!",
+                      text: "Your message has been sent.",
+                      icon: "success",
+                      button: "Great!",
+                    });
+                }, 500);
             }
         </script>
         
