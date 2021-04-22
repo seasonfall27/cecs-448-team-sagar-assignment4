@@ -584,6 +584,7 @@ table{
     margin-bottom: 10px;
     padding: 0px;
     border-radius: 20px;
+    color: floralwhite;
 }
 
 table td{
@@ -595,15 +596,15 @@ input {
     width: 95%;
     padding: 5px;
     border: medium #5d6066 double;
-    background-color: #fff;
+    background-color: floralwhite;
     font-size: 14px;
 /*    font-weight: bold;*/
 }
 
 input[type=submit] {
     padding: 10px;
-    width: 30%;
-    background-color: #fff;
+    width: 20%;
+    background-color: floralwhite;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 2px;
@@ -619,7 +620,7 @@ input[type=submit]:hover {
 textarea {
     width: 95%;
     padding: 5px;
-    background-color: #fff;
+    background-color: floralwhite;
     border: medium #5d6066 double;
     font-size: 14px;
 
@@ -641,6 +642,7 @@ input[type=text]:focus {
 
 .left{
     width: 30%;
+    color: floralwhite;
     
 }
 
@@ -650,7 +652,7 @@ input[type=text]:focus {
 
 .right{
     width: 70%;
-    border-left: 5px solid black;
+    border-left: 5px solid floralwhite;
 }
 
 
@@ -701,6 +703,7 @@ input[type=text]:focus {
     letter-spacing: 2px;
     color: #383838;
     transition: 0.3s;
+    background-color: floralwhite;
 }
 
 .apply_button:hover {
