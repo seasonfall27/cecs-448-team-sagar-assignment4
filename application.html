@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <!-- Added JQuery for easier Javascript functionality -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- Added SweetAlert JS for popup message -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <head> 
+        <title>Ding Tea USA</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- Added library for hamburger navigation icon -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Added font family -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Playfair+Display+SC&family=Roboto&family=Source+Serif+Pro:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="header">
+            <!-- Navigation -->
+            <div id="nav" class="navpanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="home.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="location.html">Locations</a>
+                <a href="contact.html">Contact</a>
+                <a href="socials.html">Social Media</a>
+                <a href="vendor.html">Vendor</a>
+            </div>
+            <button class="openbtn" onclick="openNav()">&#9776;</button>
+            <h1>Ding Tea Huntington Beach</h1>
+            <hr class="solid">
+        </div>
+        
+        <!-- Content -->
+        <center>
+            <div class="circular" id="circular">
+              <div class="inner"></div>
+              <div class="numb">0%</div>
+              <div class="circle">
+                <div class="bar left">
+                  <div class="progress"></div>
+                </div>
+                <div class="bar right">
+                  <div class="progress"></div>
+                </div>
+              </div> 
+            </div>
+        </center>
+        <div class = "apply_top" >
+            <h2>Join our team</h2>
+            <p>Fill out the form below and we will get back to you when there is an opening </p>
+        </div>
+        <form onsubmit="submitFunction();return false;" action="/action_page.php">
+            <h2 align="center">Application</h2>
+            <table class="form" align="center" width="100%" cellpadding="10" cellspacing="10">
+                <tr>
+                    <td align="right" id="fn1">First Name</td>
+                    <td><input type="text" name="fname" id="fname" value="" required></td>
+                </tr>
+                <tr>
+                    <td align="right">Last Name</td>
+                    <td><input type="text" name="lname" id="lname" value="" required></td>
+                </tr>
+                <tr>
+                    <td align="right">Phone Number</td>
+                    <td><input type="tel" name="phone" id="phone" value="" required></td>
+                </tr>
+                <tr>
+                  <td align="right">Email</td>
+                  <td><input type="email" name="email" id="email" value="" required></td>
+                </tr>
+                <tr>
+                  <td align="right">Resume</td>
+                  <td><input type="file" name="filename" button onclick="processingResume()" id="myfiles" style="color: black"></td>
+                </tr> 
+                <tr>
+                  <td align="right">Location</td>
+                  <td><select id="cars" name="carlist" form="carform" style="width: 95%;">
+                          <option value="Huntington Beach">Huntington Beach</option>
+                          <option value="Westminster">Westminster</option>
+                          <option value="Artesia">Artesia</option>
+                          <option value="San Diego">San Diego</option>
+                        </select></td>
+                </tr>
+                <tr>
+                  <td align="right">Cover Letter</td>
+                  <td><textarea name="comments" id="comments" cols="22" rows="10" placeholder="Tell us about yourself"></textarea></td>
+                </tr>
+                <tr>
+                    <td align= "center" colspan="2">
+                        <input type="submit" name="submit" id="submit" value="Send"></td>
+                </tr>
+            </table>
+        </form>
+
+        
+    <!-- Javascript -->
+        <script>
+            /* Set the width of the sidebar to 250px (show it) */
+            function openNav() {
+                document.getElementById("nav").style.width = "300px";
+            }
+
+            /* Set the width of the sidebar to 0 (hide it) */
+            function closeNav() {
+                document.getElementById("nav").style.width = "0";
+            }
+            
+            function submitFunction() {  
+                setTimeout(function() {
+                    //alert("Your submission to the form has been confirmed!");
+                    swal({
+                      title: "Submission Success!",
+                      text: "Your application has been sent.",
+                      icon: "success",
+                      button: "Thank you!",
+                    });
+                }, 500);
+            }
+            
+            //function that processes and loads the photo
+            function processingResume() {
+                prog = document.getElementById("circular");
+                prog.style.display = "none";
+                setTimeout(function() {
+                    //$('#circular').show();
+                    prog.style.display = "block";
+                    swal({
+                        title: "Uploading resume...",
+                        content: prog,
+                    });
+                }, 2000); 
+            }
+            
+            //Javascript for image upload and cancel button  
+            const wrapper = document.querySelector(".wrapper");
+            const inputBtn = document.querySelector("#myfiles");
+            
+            inputBtn.addEventListener("change",function(){
+                 const file = this.files[0];
+                 if(file){
+                 const reader = new FileReader();
+                 //Javascript for circular progress animation
+                 const numb = document.querySelector(".numb");
+                 let counter = 0;
+                 setInterval(() => {
+                     if(counter == 100){
+                        clearInterval();
+                    }else{
+                        counter += 1;
+                        numb.textContent = counter + "%";
+                    }
+                 }, 20);
+                
+                 setTimeout(function processingResume() {
+                     reader.onload = function processingResume(){
+                     const result = reader.result;
+                     img.src = result;
+                     wrapper.classList.add("active");
+                 }
+                     reader.readAsDataURL(file);
+              }, 2100);
+               }
+            });
+        </script>
+        
+    </body>
+</html>
