@@ -8,6 +8,7 @@
         <!-- Added font family -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Playfair+Display+SC&family=Roboto&family=Source+Serif+Pro:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     </head>
     <body>
         <div class="header">
@@ -19,7 +20,7 @@
                 <a href="location.html">Locations</a>
                 <a href="contact.html">Contact</a>
                 <a href="socials.html">Social Media</a>
-                <a href="vendor.html">Vendor</a>
+                <a href="vendor-protected.html">Vendor</a>
             </div>
             <button class="openbtn" onclick="openNav()">&#9776;</button>
             
@@ -27,10 +28,18 @@
             <a href="home.html"><h1>Ding Tea Huntington Beach</h1></a>
             <hr class="solid">
         </div>
-        
-        <h2>Vendor (Header Title)</h2>
-        <p>Description here.</p>
-        
+        <br>
+        <center><h2>Welcome to your Vendor Page</h2>
+        <br>
+        <div class="vendorcard">
+          <div id="curve_chart" style="width: 100%; height: 500px"></div>
+          <div class="vendorcontainer">
+              <div id="chart_div"></div>
+            <h4><b>Organization Chart</b></h4> 
+            <p>Ding Tea Huntington Beach Locations</p> 
+          </div>
+        </div>
+        </center>
         
     <!-- Javascript -->
         <script>
@@ -40,6 +49,77 @@
 
             function closeNav() {
                 document.getElementById("nav").style.width = "0";
+            }
+            // Load google charts
+            google.charts.load('current', {'packages':['corechart']});
+            google.charts.setOnLoadCallback(drawChart);
+            
+            google.charts.load('current', {packages:["orgchart"]});
+            google.charts.setOnLoadCallback(drawChart2);
+
+            function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+                  ['Year', 'Sales', 'Expenses'],
+                  ['2018',  1000,      400],
+                  ['2019',  1170,      460],
+                  ['2020',  660,       1120],
+                  ['2021',  1030,      540]
+                ]);
+
+                var options = {
+                  title: 'Overall Vendor Location Performance',
+                  curveType: 'function',
+                  legend: { position: 'bottom' }
+                };
+
+                var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+                chart.draw(data, options);
+            }
+            function drawChart2() {
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', 'Name');
+                data.addColumn('string', 'Manager');
+                data.addColumn('string', 'ToolTip');
+
+                // For each orgchart box, provide the name, manager, and tooltip to show.
+                data.addRows([
+                  [{'v':'Phybie', 'f':'<div style="color:black; font-style:italic">Phybie Founder</div>'},
+                   '', 'The President'],
+                  [{'v':'Jim', 'f':'<div style="color:black; font-style:italic">Jim Manager</div>'},
+                   'Phybie', 'Manager'],
+                  [{'v':'Alice', 'f':'<div style="color:black; font-style:italic">Alice Manager</div>'},
+                   'Phybie', 'Manager'],
+                  [{'v':'Hoang', 'f':'<div style="color:black; font-style:italic">Hoang Shift Lead</div>'},
+                   'Alice', 'Shift Lead'],
+                  [{'v':'Julia', 'f':'<div style="color:black; font-style:italic">Julia Shift Lead</div>'},
+                   'Alice', 'Shift Lead'],
+                  [{'v':'Nathan', 'f':'<div style="color:black; font-style:italic">Nathan Employee</div>'},
+                   'Hoang', 'Employee'],
+                  [{'v':'Ashley', 'f':'<div style="color:black; font-style:italic">Ashley Employee</div>'},
+                   'Hoang', 'Employee'],
+                  [{'v':'Steven', 'f':'<div style="color:black; font-style:italic">Steven Employee</div>'},
+                   'Julia', 'Employee'],
+                  [{'v':'Kenneth', 'f':'<div style="color:black; font-style:italic">Kenneth Employee</div>'},
+                   'Julia', 'Employee'],
+                  [{'v':'Bob', 'f':'<div style="color:black; font-style:italic">Bob Shift Lead</div>'},
+                   'Jim', 'Shift Lead'],
+                  [{'v':'Jennifer', 'f':'<div style="color:black; font-style:italic">Jennifer Shift Lead</div>'},
+                   'Jim', 'Shift Lead'],
+                  [{'v':'Carol', 'f':'<div style="color:black; font-style:italic">Carol Employee</div>'},
+                   'Bob', 'Employee'],
+                  [{'v':'Aaron', 'f':'<div style="color:black; font-style:italic">Aaron Employee</div>'},
+                   'Bob', 'Employee'],
+                  [{'v':'Tommy', 'f':'<div style="color:black; font-style:italic">Tommy Employee</div>'},
+                   'Jennifer', 'Employee'],
+                  [{'v':'Sarah', 'f':'<div style="color:black; font-style:italic">Sarah Employee</div>'},
+                   'Jennifer', 'Employee']
+                ]);
+
+                // Create the chart.
+                var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+                // Draw the chart, setting the allowHtml option to true for the tooltips.
+                chart.draw(data, {'allowHtml':true});
             }
         </script>
         
