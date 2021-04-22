@@ -176,6 +176,7 @@ html {
 .promo-container {
     margin-top: 15px;
     width: 100%;
+    height: auto;
     align-items: start;
     display: grid;
     grid-gap: 20px;
@@ -186,7 +187,7 @@ html {
 .promo {
     background-color: #333;
     width: 27vw;
-    height: 24vh;
+    height: 40vh;
     border-radius: 20px;
     box-shadow: 5px 5px #f1e1cd;
     color: #f9eddf;
@@ -244,6 +245,10 @@ html {
     color: #fff;
     width: auto;
     height: 340px;
+}
+
+.showcase-container img {
+    margin-left: 5%;
 }
 
 @keyframes display {
