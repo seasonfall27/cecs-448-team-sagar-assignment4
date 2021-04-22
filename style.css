@@ -62,6 +62,10 @@ html {
     scroll-behavior: smooth;
 }
 
+a {
+    text-decoration: none;
+}
+
 /*****       SCROLLBAR        *****/
 ::-webkit-scrollbar{
     width: 8px;
@@ -110,7 +114,8 @@ html {
 }
 
 .navpanel a:hover {
-    color: #f1f1f1;
+    text-decoration: underline;
+    color: rgb(243, 215, 183);
 }
 
 .navpanel .closebtn {
