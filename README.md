@@ -16,3 +16,4 @@ How to Run Instructions:
 2. Locate ZIP and extract the files.
 3. Right click the home.html file
 4. Click open to view in Google Chrome web browser
+5. To test the password protected vendor page, insert "dingteahb" as the password.
