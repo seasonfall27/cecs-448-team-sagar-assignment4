@@ -75,12 +75,12 @@ hr.solid {
  
 ::-webkit-scrollbar-thumb {
     border-radius:10px;
-    background:#5375a5;
+    background:#a09769;
     background-clip:padding-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #7cd82f;
+    background: #dfccb3;
 }
 
 
