@@ -65,10 +65,7 @@ html {
 /*****       SCROLLBAR        *****/
 ::-webkit-scrollbar{
     width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: #000;
+    height: 8px;
 }
  
 ::-webkit-scrollbar-thumb {
@@ -79,6 +76,10 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #dfccb3;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
 }
 
 
@@ -159,7 +160,8 @@ html {
     table-layout: fixed;
     z-index: 1;
     max-width: 900px;
-    max-height: 300px;
+    max-height: 320px;
+    overflow: scroll;
 }
 
 #history_table tr td:first-child {
@@ -169,7 +171,7 @@ html {
 #history_table tr td:last-child {
     font-size: 15px;
     text-align: justify;
-    padding: 0px 30px 0px 30px;
+    padding: 0px 30px 20px 30px;
     background-color: rgba(244, 228, 206, 0.2);
     border-radius: 40px;
     color: #fff;
@@ -201,18 +203,21 @@ html {
     background-image: url(images/home_promo1.png);
     background-size: cover;
     background-position: center;
+    overflow: scroll;
 }
 
 .promo:nth-child(2) {
     background-image: url(images/background_map3.png);
     background-size: cover;
     background-position: center;
+    overflow: scroll;
 }
 
 .promo:last-child {
     background-image: url(images/home_promo3.png);
     background-size: cover;
     background-position: center;
+    overflow: scroll;
 }
 
 .promo p {
@@ -238,15 +243,7 @@ html {
 }
 
 .showcase-container {
-    margin: 20px 0 40px 0;
-    background-image: url(images/background_map1.png);
-    background-position: center;
-    background-size: cover;
-    box-shadow: 5px 5px #111;
-    border-radius: 25px;
-    color: #fff;
-    width: auto;
-    height: 340px;
+    margin: 10px 0 40px 0;
 }
 
 .showcase-container img {
