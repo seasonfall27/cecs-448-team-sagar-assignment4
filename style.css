@@ -23,6 +23,7 @@ h2 {
     font-size: 32px;
     text-transform: uppercase;
     padding-left: 25px;
+    color: floralwhite;
 }
 
 h3 {
@@ -343,6 +344,7 @@ img:nth-child(2) {
 	 padding: 0rem;
 	 width: 100%;
 	 text-align: center;
+     border: 2px solid #73675b;
 	 color: whitesmoke;
 	 background-color: whitesmoke;
 	 box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
@@ -503,7 +505,7 @@ clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
     -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
     clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
     transition: .3s;
-    border: 1px solid #ddd;
+    border: 1px solid #000;
     border-radius: 5px;
 }
 
@@ -517,6 +519,7 @@ clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
     border-bottom: 1px dashed #b4b3b2;
     line-height: 2;
     text-transform: capitalize;
+    color: #bf9c78;
 }
 .menu_content h4 span {
     font-size: 25px;
@@ -530,6 +533,7 @@ clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
     font-weight: 200;
     font-size: 16px;
     letter-spacing: 1px;
+    color: antiquewhite;
 }
 .menu_btn.btn.btn-danger {
     margin: 0 auto;
