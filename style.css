@@ -406,6 +406,9 @@ img:nth-child(2) {
  .card:nth-child(7):before {
 	 background-image: url(https://www.dingtea.com/upload/fac_m_list_pic/enL_fac_m_19L22_6v56rgwbqk.jpg);
 }
+ .card:nth-child(8):before {
+	 background-image: url("images/toppings.png");
+}
 
  .content {
 	 position: relative;
